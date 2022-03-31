@@ -1,13 +1,12 @@
 print("Hello")
-#let's import the data
+#let's say we have the data under the name datav
 library(readr)
 data <- read_delim("datav.csv", delim = ";", 
                       escape_double = FALSE, trim_ws = TRUE)
-view(datva)
+view(datav)
 attach(datav)
 str(datav)
-datav = ts(datav, start=c(2010,1), frequency=12)
-plot(datav) #let's make time series plot of all variables
+plot(datav) #time series plot
 #load libraries we need
 library(tseries)
 library(ARDL)
